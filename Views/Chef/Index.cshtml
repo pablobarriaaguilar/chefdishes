@@ -1,0 +1,15 @@
+@model Chef
+
+<form asp-controller="Chef" asp-action="Create">
+    <label asp-for="@Model.FirstName"></label>
+    <input asp-for="@Model.FirstName">
+    <span asp-validation-for="@Model.FirstName"></span>
+    <label asp-for="@Model.LastName"></label>
+    <input asp-for="@Model.LastName">
+    <span asp-validation-for="@Model.LastName"></span>
+
+    <label asp-for="@Model.DateOfBirth"></label>
+    <input asp-for="@Model.DateOfBirth">
+    <span asp-validation-for="@Model.DateOfBirth"></span>
+    <button class="btn-primary"> Create</button>
+</form>

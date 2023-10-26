@@ -1,0 +1,29 @@
+@model List<Chef>
+
+
+<h1>Check out our roster of chefs!</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col"># of Dishes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    @foreach( Chef _chef in @Model){
+        <tr>
+<th scope="row">@_chef.FirstName @_chef.LastName</th>
+      <td>@_chef.Age</td>
+      <td>@_chef.AllDishes.Count</td>
+
+            </tr>
+
+}
+    
+      
+    
+   
+  </tbody>
+</table>

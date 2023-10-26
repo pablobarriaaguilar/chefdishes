@@ -1,0 +1,23 @@
+@model Dish
+
+<form asp-controller="Dish" asp-action="Create">
+    <label asp-for="@Model.Name"></label>
+    <input asp-for="@Model.Name">
+    <span asp-validation-for="@Model.Name"></span>
+    <label asp-for="@Model.Tastiness"></label>
+    <input asp-for="@Model.Tastiness">
+    <span asp-validation-for="@Model.Tastiness"></span>
+    <label asp-for="@Model.Calories"></label>
+    <input asp-for="@Model.Calories">
+    <span asp-validation-for="@Model.Calories"></span>
+    <label asp-for="@Model.ChefId"> Chef´s Name</label>
+    <select asp-for="@Model.ChefId">
+
+        @foreach (Chef c in ViewBag.AllChefs)
+                    {
+                        <option value="@c.ChefId">@c.FirstName</option>
+                    }
+    </select>
+    <span asp-validation-for="@Model.ChefId"></span>
+    <button class="btn-primary">Crear</button>
+</form>
